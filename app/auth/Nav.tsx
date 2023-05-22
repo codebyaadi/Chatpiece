@@ -4,7 +4,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../pages/api/auth/[...nextauth]";
 import Logged from "./Logged";
 
-const Nav = async (): Promise<JSX.Element> => {
+export default async function Nav() {
     const session = await getServerSession(authOptions);
     console.log(session)
     return (
@@ -20,4 +20,3 @@ const Nav = async (): Promise<JSX.Element> => {
     );
 }
 
-export default Nav;
