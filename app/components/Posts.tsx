@@ -4,14 +4,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 type Post = {
-    avatar: string
-    name: string
-    postTitle: string
     id: string
+    name: string
+    avatar: string
+    postTitle: string
     comment: any
 }
 
-export default function Posts({avatar, name, postTitle, id, comment}: Post) {
+export default function Posts({id, name, avatar, postTitle, comment}: Post) {
     return (
         <div className="bg-white my-8 p-8 rounded-lg">
             <div className="flex items-center gap-2">
