@@ -8,7 +8,7 @@ type Post = {
     name: string
     postTitle: string
     id: string
-    comment: string
+    comment: any
 }
 
 export default function Posts({avatar, name, postTitle, id, comment}: Post) {
