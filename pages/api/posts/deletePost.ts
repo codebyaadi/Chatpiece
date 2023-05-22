@@ -16,7 +16,7 @@ export default async function handler(
     // Delete Post
     try {
       const postId: string = await req.body.id
-      console.log(postId)
+      //console.log(postId)
       const result = await prisma.post.delete({
         where: {
           id: postId,

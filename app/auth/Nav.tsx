@@ -6,7 +6,7 @@ import Logged from "./Logged";
 
 const Nav: any = async (): Promise<JSX.Element> => {
     const session = await getServerSession(authOptions);
-    console.log(session)
+    //console.log(session)
     return (
         <nav className="flex justify-between items-center py-8">
             <Link href="/">
