@@ -1,5 +1,7 @@
+import Nav from './auth/Nav'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import QueryWrapper from './auth/QueryWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -9,13 +11,17 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+  children,}: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`mx-4 md:mx-48 xl:mx-96 ${inter.className} font-sans bg-gray-200`}>
+        <QueryWrapper>
+          <Nav />
+          {children}
+        </QueryWrapper>
+      </body>
     </html>
   )
 }
