@@ -4,10 +4,10 @@ import Image from "next/image"
 import Link from "next/link"
 
 type Post = {
-    id: string
-    name: string
-    avatar: string
-    postTitle: string
+    id: any
+    name: any
+    avatar: any
+    postTitle: any
     comment: any
 }
 
